@@ -93,7 +93,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    padding: 0 6rem;
+    padding: 0 4vw;
     gap: 4rem;
     position: relative;
     overflow: hidden;
@@ -155,7 +155,8 @@
   }
 
   .hero-cta {
-    display: flex; gap: 0.8rem; flex-wrap: nowrap; align-items: center;
+    display: flex; gap: 0.8rem; flex-wrap: wrap; 
+    justify-content: center; align-items: center;
     opacity: 0; animation: fadeUp 1s 0.9s ease forwards;
   }
 
@@ -321,7 +322,7 @@
   }
 
   /* Sections */
-  section { padding: 6rem 6rem; }
+ section { padding: 5rem 4vw; }
 
   .section-header {
     display: flex; align-items: center; gap: 1.5rem;
@@ -410,7 +411,7 @@
   /* Skills / Courses */
   .skills-bg { background: var(--bg2); }
   .skills-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr);
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 1rem;
   }
   .skill-pill {
@@ -494,7 +495,7 @@
   .interests-bg { background: var(--bg2); }
   .interests-grid { 
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 1rem;
   }
   .interest-item {
@@ -603,6 +604,31 @@
     .skills-grid { grid-template-columns: 1fr 1fr; }
     .footer-bar { flex-direction: column; gap: 0.5rem; padding: 1.5rem 2rem; }
   }
+  @media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+ }
+ @media (max-width: 600px) {
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-desc {
+    font-size: 0.85rem;
+  }
+
+  .project-card {
+    padding: 1.5rem;
+  }
+
+  .stats-strip {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+ }
 </style>
 </head>
 <body>
